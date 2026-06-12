@@ -19,7 +19,6 @@ import {
   buildPromptRecipeFiles,
   buildPromptStarterFiles,
 } from "./graphql/prompt";
-import { PHOENIX_GQL_GUIDE } from "./graphql/shared";
 import { buildTraceRecipeFiles, buildTraceStarterFiles } from "./graphql/trace";
 import type { GeneratedContextFile } from "./types";
 
@@ -145,7 +144,6 @@ export async function buildGraphqlContextFiles(pageContext: AgentPageContext) {
       `${PHOENIX_ROOT}/agent-start.md`,
       buildAgentStartGuide({ pageContext, recipePaths }),
     ],
-    [`${PHOENIX_ROOT}/graphql/README.md`, PHOENIX_GQL_GUIDE],
     [
       `${PHOENIX_ROOT}/graphql/current-page.md`,
       buildCurrentPageGuide({ pageContext, recipePaths }),
